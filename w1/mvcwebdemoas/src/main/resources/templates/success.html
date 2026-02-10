@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .container {
+            width: 450px;
+            text-align: center;
+        }
+        /* ปรับสีหัวข้อให้เป็นสีเขียว */
+        h1, h2 {
+            color: #28a745; /* สีเขียว */
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+        /* ส่วนแสดงรายการข้อมูล */
+        ul {
+            text-align: left; 
+            list-style-type: disc;
+            padding-left: 40px;
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #000;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Registration</h1>
+    <h2>Successful!</h2>
+
+    <p>Thank you for registering. Here are your details:</p>
+
+    <ul>
+        <li><strong>First Name:</strong> <span th:text="${firstName}"></span></li>
+        <li><strong>Last Name:</strong> <span th:text="${lastName}"></span></li>
+        <li><strong>Country:</strong> <span th:text="${country}"></span></li>
+        <li><strong>Date of Birth:</strong> <span th:text="${dob}"></span></li>
+        <li><strong>Email:</strong> <span th:text="${email}"></span></li>
+    </ul>
+
+    <a th:href="@{/}" class="back-link">Back to Home</a>
+</div>
+
+</body>
+</html>
